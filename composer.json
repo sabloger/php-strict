@@ -1,0 +1,27 @@
+{
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "sabloger/php-strict",
+        "version": "dev-master",
+        "source": {
+          "url": "git://github.com/sabloger/php-strict.git",
+          "type": "git",
+          "reference": "master"
+        },
+        "autoload": {
+          "psr-0": {
+            "Sabloger\\Php_Strict": "src\\php-strict"
+          }
+        }
+      }
+    }
+  ],
+  "require": {
+    "sabloger/php-strict": "dev-master"
+  },
+  "config": {
+    "secure-http":false
+  }
+}
