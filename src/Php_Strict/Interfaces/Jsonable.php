@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabloger\Php_Strict\Interfaces;
+namespace Php_Strict\Interfaces;
 
 interface Jsonable
 {

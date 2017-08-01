@@ -6,7 +6,7 @@
  * Time: 9:56 AM
  */
 
-namespace App\Exceptions;
+namespace Php_Strict\Exceptions;
 
 
 class ObjectValidationFailedException extends \Exception

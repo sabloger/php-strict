@@ -1,3 +1,5 @@
-/src/php-strict/Tests
+/src/Php_Strict/Tests
 /vendor
 .idea
+composer.lock
+composer.phar

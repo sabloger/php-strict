@@ -6,12 +6,16 @@
  * Time: 1:39 PM
  */
 
-namespace Sabloger\Php_Strict;
+namespace Php_Strict;
 
 
 class Object extends BaseObject
 {
 
+    public static function dd()
+    {
+        echo "DD DD??";
+    }
     /**
      * @return array
      */

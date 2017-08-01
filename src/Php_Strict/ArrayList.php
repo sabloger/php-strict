@@ -6,22 +6,22 @@
  * Time: 9:23 AM
  */
 
-namespace Sabloger\Php_Strict;
+namespace Php_Strict;
 
 
 use App\Exceptions\InvalidItemTypeException;
 use App\Exceptions\SetTypeOfArrayListAfterCreateException;
 use App\Exceptions\StringOffsetException;
-use App\Objects\Traits\CountableTrait;
-use App\Objects\Traits\IteratorTrait;
-use App\Objects\Traits\JsonableTrait;
-use App\Objects\Traits\JsonSerializeTrait;
-use App\Objects\Traits\SerializableTrait;
-use App\Objects\Traits\StringTrait;
-use App\Objects\Traits\TypesTrait;
-use Sabloger\Php_Strict\Interfaces\Arrayable;
-use Sabloger\Php_Strict\Interfaces\ArrayListInterface;
-use Sabloger\Php_Strict\Interfaces\Jsonable;
+use Php_Strict\Traits\CountableTrait;
+use Php_Strict\Traits\IteratorTrait;
+use Php_Strict\Traits\JsonableTrait;
+use Php_Strict\Traits\JsonSerializeTrait;
+use Php_Strict\Traits\SerializableTrait;
+use Php_Strict\Traits\StringTrait;
+use Php_Strict\Traits\TypesTrait;
+use Php_Strict\Interfaces\Arrayable;
+use Php_Strict\Interfaces\ArrayListInterface;
+use Php_Strict\Interfaces\Jsonable;
 
 class ArrayList implements ArrayListInterface, \IteratorAggregate, \Serializable, \Countable, \ArrayAccess, Arrayable, Jsonable, \JsonSerializable
 {

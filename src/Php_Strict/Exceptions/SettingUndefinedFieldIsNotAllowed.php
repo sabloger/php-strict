@@ -3,20 +3,20 @@
  * Created by PhpStorm.
  * User: sabloger
  * Date: 7/11/17
- * Time: 11:07 AM
+ * Time: 12:46 PM
  */
 
-namespace App\Exceptions;
+namespace Php_Strict\Exceptions;
 
 
 use Throwable;
 
-class SetTypeOfArrayListAfterCreateException extends \Exception
+class SettingUndefinedFieldIsNotAllowed extends \Exception
 {
     public function __construct($message = "", $code = 0, Throwable $previous = null)
     {
         if(empty($message))
-            $message = 'Setting type of Array List after creation is now allowed!';
+            $message = 'Setting value for undefined field is not allowed!';
         parent::__construct($message, $code, $previous);
     }
 

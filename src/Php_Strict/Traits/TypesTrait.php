@@ -6,7 +6,7 @@
  * Time: 5:24 PM
  */
 
-namespace App\Objects\Traits;
+namespace Php_Strict\Traits;
 
 
 trait TypesTrait

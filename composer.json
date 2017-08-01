@@ -1,27 +1,19 @@
 {
-  "repositories": [
+  "name": "sabloger/php-strict",
+  "description": "A package of Strict-typed Object base and Array-List for PHP!!!! Edit",
+  "authors": [
     {
-      "type": "package",
-      "package": {
-        "name": "sabloger/php-strict",
-        "version": "dev-master",
-        "source": {
-          "url": "git://github.com/sabloger/php-strict.git",
-          "type": "git",
-          "reference": "master"
-        },
-        "autoload": {
-          "psr-0": {
-            "Sabloger\\Php_Strict": "src\\php-strict"
-          }
-        }
-      }
+      "name": "Saeed Falsafin",
+      "email": "sabloger@gmail.com"
     }
   ],
+  "minimum-stability": "dev",
   "require": {
-    "sabloger/php-strict": "dev-master"
+    "php": ">=5.4.0"
   },
-  "config": {
-    "secure-http":false
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
   }
 }

@@ -6,7 +6,7 @@
  * Time: 10:19 AM
  */
 
-namespace App\Objects\Traits;
+namespace Php_Strict\Traits;
 
 
 trait JsonableTrait

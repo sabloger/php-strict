@@ -1,25 +1,26 @@
 <?php
 
-namespace Sabloger\Php_Strict;
+namespace Php_Strict;
 
 use App\Exceptions\InvalidItemTypeException;
 use App\Exceptions\NullOrScalarOffsetException;
 use App\Exceptions\ObjectValidationFailedException;
 use App\Exceptions\RequiredFieldsNotFilledException;
 use App\Exceptions\SettingUndefinedFieldIsNotAllowed;
-use App\Objects\Traits\CountableTrait;
-use App\Objects\Traits\IteratorTrait;
-use App\Objects\Traits\JsonableTrait;
-use App\Objects\Traits\JsonSerializeTrait;
-use App\Objects\Traits\SerializableTrait;
-use App\Objects\Traits\StringTrait;
-use App\Objects\Traits\TypesTrait;
-use Sabloger\Php_Strict\Interfaces\Arrayable;
-use Sabloger\Php_Strict\Interfaces\Jsonable;
-use Sabloger\Php_Strict\Interfaces\ObjectInterface;
+use Php_Strict\Traits\CountableTrait;
+use Php_Strict\Traits\IteratorTrait;
+use Php_Strict\Traits\JsonableTrait;
+use Php_Strict\Traits\JsonSerializeTrait;
+use Php_Strict\Traits\SerializableTrait;
+use Php_Strict\Traits\StringTrait;
+use Php_Strict\Traits\TypesTrait;
+use Php_Strict\Interfaces\Arrayable;
+use Php_Strict\Interfaces\Jsonable;
+use Php_Strict\Interfaces\ObjectInterface;
 
 
 /**
+ * TODO:: Change [] to array() to support rater than php 5.4
  * User: sabloger
  * Date: 7/10/17
  * Time: 9:06 AM

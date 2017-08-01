@@ -6,7 +6,7 @@
  * Time: 11:00 AM
  */
 
-namespace App\Objects\Traits;
+namespace Php_Strict\Traits;
 
 
 trait IteratorTrait

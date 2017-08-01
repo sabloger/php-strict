@@ -6,7 +6,7 @@
  * Time: 10:35 AM
  */
 
-namespace App\Exceptions;
+namespace Php_Strict\Exceptions;
 
 
 use Throwable;

@@ -6,7 +6,7 @@
  * Time: 6:05 PM
  */
 
-namespace App\Exceptions;
+namespace Php_Strict\Exceptions;
 
 
 class RequiredFieldsNotFilledException extends \Exception

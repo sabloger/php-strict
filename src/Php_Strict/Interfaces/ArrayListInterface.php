@@ -6,7 +6,7 @@
  * Time: 9:30 AM
  */
 
-namespace Sabloger\Php_Strict\Interfaces;
+namespace Php_Strict\Interfaces;
 
 interface ArrayListInterface
 {

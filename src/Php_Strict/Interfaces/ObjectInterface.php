@@ -6,7 +6,7 @@
  * Time: 11:46 AM
  */
 
-namespace Sabloger\Php_Strict\Interfaces;
+namespace Php_Strict\Interfaces;
 
 
 interface ObjectInterface
