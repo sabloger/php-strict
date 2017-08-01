@@ -1,7 +1,8 @@
 # php-strict
 Strict-typed Object base and Array-List for PHP!
 
-[![License](https://poser.pugx.org/sabloger/php-strict/license.svg)](https://packagist.org/packages/sabloger/php-strict)
+[![License](https://poser.pugx.org/sabloger/php-strict/license.svg)](https://github.com/sabloger/php-strict/blob/master/LICENSE)
+[![Packagist](https://img.shields.io/badge/packagist-dev--master-orange.svg)](https://packagist.org/packages/sabloger/php-strict)
 
 ## Introduction
 - If you need PHP much clearer you'll be happy with Php-Strict!
