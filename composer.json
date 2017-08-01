@@ -1,6 +1,6 @@
 {
   "name": "sabloger/php-strict",
-  "description": "A package of Strict-typed Object base and Array-List for PHP!!!! Edit",
+  "description": "A package of Strict-typed Object base and Array-List for PHP!",
   "authors": [
     {
       "name": "Saeed Falsafin",
@@ -15,5 +15,6 @@
     "psr-4": {
       "": "src/"
     }
-  }
+  },
+  "license": "MIT"
 }
