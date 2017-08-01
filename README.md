@@ -9,7 +9,7 @@ Strict-typed Object base and Array-List for PHP!
 
 ## Installation
 Add following code to your `composer.json` and run `composer update`:
-```
+```json
 {
   ...
   "require": {
