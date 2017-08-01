@@ -1,5 +1,6 @@
 # php-strict
 Strict-typed Object base and Array-List for PHP!
+
 [![License](https://poser.pugx.org/sabloger/php-strict/license.svg)](https://packagist.org/packages/sabloger/php-strict)
 
 ## Introduction
