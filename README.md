@@ -1,5 +1,6 @@
 # php-strict
 Strict-typed Object base and Array-List for PHP!
+[![License](https://poser.pugx.org/sabloger/php-strict/license.svg)](https://packagist.org/packages/sabloger/php-strict)
 
 ## Introduction
 - If you need PHP much clearer you'll be happy with Php-Strict!
@@ -11,11 +12,9 @@ Strict-typed Object base and Array-List for PHP!
 Add following code to your `composer.json` and run `composer update`:
 ```json
 {
-  ...
   "require": {
     "sabloger/php-strict": "dev-master"
   }
-  ...
 }
 ```
 ## LICENSE
