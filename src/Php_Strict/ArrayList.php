@@ -9,9 +9,9 @@
 namespace Php_Strict;
 
 
-use App\Exceptions\InvalidItemTypeException;
-use App\Exceptions\SetTypeOfArrayListAfterCreateException;
-use App\Exceptions\StringOffsetException;
+use Php_Strict\Exceptions\InvalidItemTypeException;
+use Php_Strict\Exceptions\SetTypeOfArrayListAfterCreateException;
+use Php_Strict\Exceptions\StringOffsetException;
 use Php_Strict\Traits\CountableTrait;
 use Php_Strict\Traits\IteratorTrait;
 use Php_Strict\Traits\JsonableTrait;

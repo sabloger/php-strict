@@ -11,11 +11,6 @@ namespace Php_Strict;
 
 class Object extends BaseObject
 {
-
-    public static function dd()
-    {
-        echo "DD DD??";
-    }
     /**
      * @return array
      */
