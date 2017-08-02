@@ -28,7 +28,7 @@ use Php_Strict\BaseObject;
 
 /**
  * Class Book
- * @package App\Objects
+ * @package Php_Strict
  * @method Book setTitle(string $value)
  * @method Book setAuthor(string $value)
  * @method Book setYear(int $value)
@@ -78,7 +78,31 @@ class Book extends BaseObject
 
 use:
 ```php
+$book = new Book(["Title" => "Advanced PHP Programming"]); // Its case-insensitive and auto case-correcter!! :)
+$book->setAuthor("George Schlossnagle");
+$book["Year"] = 2004;
 
+$obj = new Object();
+$obj->Foo = "bar";
+$obj["foO"] = "BAR"; // Yessss its case-insensitive and auto case-correcter!!  ["Foo": "BAR"]
+
+$book->set("some_object",$obj); // Several access methods!! Use these as you want!!
+
+print $book; // It's echoable!!
+//$book->toJson(); // Jsonable :)
+//$book->toArray(); // Arrayable :)
+
+foreach ($book as $key => $value) { // Iterateable :)
+  echo "key: $key , value: $value \n";
+}
+/*
+Out:
+{"title":"Advanced PHP Programming","author":"George Schlossnagle","year":2004,"some_object":{"Foo":"BAR"}}
+key: title , value: Advanced PHP Programming 
+key: author , value: George Schlossnagle 
+key: year , value: 2004 
+key: some_object , value: {"Foo":"BAR"} 
+*/
 ```
 ## LICENSE
 This library is released under the [MIT license](https://github.com/sabloger/php-strict/blob/master/LICENSE).
