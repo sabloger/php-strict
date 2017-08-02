@@ -1,6 +1,6 @@
 {
   "name": "sabloger/php-strict",
-  "description": "If you want PHP much clearer you'll be happy with Php-Strict! If you need a way to pass packed arguments to functions you'll be happy with Php-Strict! If you need a way to validate arguments and get rid of exceptions and data-misses on invalid arguments you'll be happy with Php-Strict! If you want a strict-typed ArrayList like Java and other strict-typed languages you'll be happy with Php-Strict!",
+  "description": "If you want PHP much clearer you'll be happy with Php-Strict!\n If you need a way to pass packed arguments to functions you'll be happy with Php-Strict!\n If you need a way to validate arguments and get rid of exceptions and data-misses on invalid arguments you'll be happy with Php-Strict!\n If you want a strict-typed ArrayList like Java and other strict-typed languages you'll be happy with Php-Strict!",
   "authors": [
     {
       "name": "Saeed Falsafin",
