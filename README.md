@@ -166,7 +166,7 @@ class BookArrayList extends ArrayList
      */
     public function validate()
     {
-        parent::each(function (Book $item, $key) {
+        parent::each(function (Book $item, $key) { // ArrayList has each(closure) method! :)
             try {
                 $item->validate();
             } catch (\Exception $exception) {
