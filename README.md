@@ -1,5 +1,5 @@
 # php-strict
-Strict-type Object base and Array-List for PHP!
+Strict-type Object base and Array-List for PHP 5! (5.4 and upper!)
 
 [![License](https://poser.pugx.org/sabloger/php-strict/license.svg)](https://github.com/sabloger/php-strict/blob/master/LICENSE)
 [![Packagist](https://img.shields.io/badge/packagist-dev--master-orange.svg)](https://packagist.org/packages/sabloger/php-strict)
