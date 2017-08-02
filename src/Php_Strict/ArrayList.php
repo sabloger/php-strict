@@ -12,6 +12,9 @@ namespace Php_Strict;
 use Php_Strict\Exceptions\InvalidItemTypeException;
 use Php_Strict\Exceptions\SetTypeOfArrayListAfterCreateException;
 use Php_Strict\Exceptions\StringOffsetException;
+use Php_Strict\Interfaces\Arrayable;
+use Php_Strict\Interfaces\ArrayListInterface;
+use Php_Strict\Interfaces\Jsonable;
 use Php_Strict\Traits\CountableTrait;
 use Php_Strict\Traits\IteratorTrait;
 use Php_Strict\Traits\JsonableTrait;
@@ -19,9 +22,6 @@ use Php_Strict\Traits\JsonSerializeTrait;
 use Php_Strict\Traits\SerializableTrait;
 use Php_Strict\Traits\StringTrait;
 use Php_Strict\Traits\TypesTrait;
-use Php_Strict\Interfaces\Arrayable;
-use Php_Strict\Interfaces\ArrayListInterface;
-use Php_Strict\Interfaces\Jsonable;
 
 class ArrayList implements ArrayListInterface, \IteratorAggregate, \Serializable, \Countable, \ArrayAccess, Arrayable, Jsonable, \JsonSerializable
 {
@@ -105,7 +105,7 @@ class ArrayList implements ArrayListInterface, \IteratorAggregate, \Serializable
      */
     public function offsetSet($offset, $value)
     {
-        if (!$this->checkType($value , $this->type))
+        if (!$this->checkType($value, $this->type))
             throw new InvalidItemTypeException($this->getItemType($value), $this->type);
         if (is_null($offset)) {
             $this->items[] = $value;
@@ -138,15 +138,15 @@ class ArrayList implements ArrayListInterface, \IteratorAggregate, \Serializable
         return key($last);
     }
 
-    /* *
-     * @param $key
+    /**
+     * @param $value
      * @return int
-
+     */
     public function offsetOf($value)
     {
-        return array_search($key, array_keys($this->toArray()));
+        return array_search($value, $this->toArray());
     }
-*/
+
 
     /**
      * @return array
@@ -206,7 +206,7 @@ class ArrayList implements ArrayListInterface, \IteratorAggregate, \Serializable
      */
     public function pop()
     {
-        throw new \Exception('Dus nadaram felan!!!');
+        throw new \Exception('TODO'); //TODO
     }
 
     /**
@@ -216,7 +216,7 @@ class ArrayList implements ArrayListInterface, \IteratorAggregate, \Serializable
      */
     public function append($item)
     {
-        throw new \Exception('Dus nadaram felan!!!');
+        throw new \Exception('TODO'); //TODO
     }
 
     /**
@@ -226,7 +226,7 @@ class ArrayList implements ArrayListInterface, \IteratorAggregate, \Serializable
      */
     public function prepend($item)
     {
-        throw new \Exception('Dus nadaram felan!!!');
+        throw new \Exception('TODO'); //TODO
     }
 
 
