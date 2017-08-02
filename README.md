@@ -104,15 +104,24 @@ key: year , value: 2004
 key: some_object , value: {"Foo":"BAR"} 
 */
 ```
-## Usage:ArrayList
+## Usage: ArrayList
 Can instantiate it directly and extend it for customization. For use only instantiate, setType and use!!
 
-Simple use:
+Basic use:
 ```php
+//Scalar:
+
+$strArr = new ArrayList('string');
+$strArr[] = "correct!";
+$strArr[] = 123; //PHP Fatal error:  Uncaught exception 'Php_Strict\Exceptions\InvalidItemTypeException' with message 'Invalid item type exception: Expected type was "string" given "integer"!'
+
+print $strArr->toJson();
+
+
+//Object:
 $obj = new Object();
 $obj->Foo = "bar";
 $obj["foO"] = "BAR";
-
 
 $arr = new ArrayList(Object::class);
 
@@ -127,6 +136,59 @@ print $arr . "\n";
 print $obj; // Its by-reference!
 ```
 Advanced use:
+```php
+use Php_Strict\ArrayList;
 
+class BookArrayList extends ArrayList
+{
+    /**
+     * @param array $items
+     * @return BookArrayList
+     */
+    public static function newLib(array $items = [])
+    {
+        return (new self($items));
+    }
+
+    /**
+     * BookArrayList constructor.
+     * @param array $items
+     */
+    public function __construct(array $items = [])
+    {
+        parent::__construct(Book::class, $items);
+    }
+
+    /**
+     * Validate all of items using Object->validate() and ArrayList each()
+     * @throws \Exception
+     * @return null|true
+     */
+    public function validate()
+    {
+        parent::each(function (Book $item, $key) {
+            try {
+                $item->validate();
+            } catch (\Exception $exception) {
+                throw new \Exception(sprintf('ArrayList validation failed at offset (%s) with message: %s' , $key, $exception->getMessage()));
+            }
+        });
+        return true;
+    }
+}
+```
+Use:
+```php
+$book = new Book(["Title" => "Advanced PHP Programming"]);
+$book->setAuthor("George Schlossnagle");
+
+$bookArr = BookArrayList::newLib();
+$bookArr[] = $book;
+$bookArr->validate(); // PHP Fatal error:  Uncaught exception 'Exception' with message 'ArrayList validation failed at offset (0) with message: Required fields are not filled. unfilled required fields: (["year"])'
+
+foreach ($bookArr as $book) { // Iterateable :)
+  echo "item: $book \n";
+}
+```
 ## LICENSE
 This library is released under the [MIT license](https://github.com/sabloger/php-strict/blob/master/LICENSE).
