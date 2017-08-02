@@ -19,5 +19,66 @@ Add following code to your `composer.json` and run `composer update`:
   }
 }
 ```
+
+## Usage: Object
+First extend one sub class from `BaseObject`, implement parent abstract methods, set predefines, instantiate then use! Finally run `$obj->validate()` for validate data!. For example:
+sub-class:
+```php
+use Php_Strict\BaseObject;
+
+/**
+ * Class Book
+ * @package App\Objects
+ * @method Book setTitle(string $value)
+ * @method Book setAuthor(string $value)
+ * @method Book setYear(int $value)
+ * @method Book setSome_Object(Object $value)
+ * @method string getTitle()
+ * @method string getAuthor()
+ * @method int getYear()
+ * @method Object getSome_Object()
+ */
+class Book extends BaseObject
+{
+    /**
+     * @return array
+     */
+    public function getFieldsStub()
+    {
+        return [
+            'title' => 'string', // All of types as you want!!
+            'author' => 'string',
+            'year' => 'int',
+            'some_object' => Object::class
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    public function getRequiredFields()
+    {
+        return [
+            'title',
+            'year'
+        ];
+    }
+
+    /**
+     * If you want to allow setting undefined properties, set it True!
+     * @return bool
+     */
+    protected function isUndefinedSettingAllowed()
+    {
+        return false;
+    }
+}
+```
+* For ease of use and get suggestions on IDE for fields setters and getters, I strongly suggesting write class level docs, as like as above sample.
+
+use:
+```php
+
+```
 ## LICENSE
 This library is released under the [MIT license](https://github.com/sabloger/php-strict/blob/master/LICENSE).
