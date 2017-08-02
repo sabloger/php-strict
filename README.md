@@ -22,7 +22,7 @@ Add following code to your `composer.json` and run `composer update`:
 
 ## Usage: Object
 First extend one sub class from `BaseObject`, implement parent abstract methods, set predefines, instantiate then use! Finally run `$obj->validate()` for validate data!. For example:
-sub-class:
+Sub-class:
 ```php
 use Php_Strict\BaseObject;
 
@@ -76,7 +76,7 @@ class Book extends BaseObject
 ```
 * For ease of use and get suggestions on IDE for fields setters and getters, I strongly suggesting write class level docs, as like as above sample.
 
-use:
+Use:
 ```php
 $book = new Book(["Title" => "Advanced PHP Programming"]); // Its case-insensitive and auto case-correcter!! :)
 $book->setAuthor("George Schlossnagle");
@@ -104,5 +104,29 @@ key: year , value: 2004
 key: some_object , value: {"Foo":"BAR"} 
 */
 ```
+## Usage:ArrayList
+Can instantiate it directly and extend it for customization. For use only instantiate, setType and use!!
+
+Simple use:
+```php
+$obj = new Object();
+$obj->Foo = "bar";
+$obj["foO"] = "BAR";
+
+
+$arr = new ArrayList(Object::class);
+
+//$arr[0] = 11; //PHP Fatal error:  Uncaught exception 'Php_Strict\Exceptions\InvalidItemTypeException' with message 'Invalid item type exception: Expected type was "Php_Strict\Object" given "integer"!'
+
+$arr[0] = $obj;
+$obj->foo = "bar";
+$arr[1] = $obj;
+$arr[0]->baz = "bag";
+$arr[2] = $obj;
+print $arr . "\n";
+print $obj; // Its by-reference!
+```
+Advanced use:
+
 ## LICENSE
 This library is released under the [MIT license](https://github.com/sabloger/php-strict/blob/master/LICENSE).
