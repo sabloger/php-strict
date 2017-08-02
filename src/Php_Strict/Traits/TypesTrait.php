@@ -34,14 +34,14 @@ trait TypesTrait
 
     /**
      * @param mixed $item
-     * @param string $excepted_type
+     * @param string $expected_type
      * @return bool
      */
-    protected function checkType($item, $excepted_type)
+    protected function checkType($item, $expected_type)
     {
-        if(empty($excepted_type) || $excepted_type == self::$TYPE_ANY)
+        if(empty($expected_type) || $expected_type == self::$TYPE_ANY)
             return true;
-        $ue_type = $this->getUnifiedType($excepted_type);
+        $ue_type = $this->getUnifiedType($expected_type);
         $type = gettype($item);
         if ($type == 'object')
             return $item instanceof $ue_type;

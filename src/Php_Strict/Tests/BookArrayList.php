@@ -16,24 +16,34 @@ class BookArrayList extends ArrayList
      * @param array $items
      * @return BookArrayList
      */
-    public static function newBook(array $items = [])
+    public static function newLib(array $items = [])
     {
         return (new self($items));
     }
 
-    public function __construct(array $items)
+    /**
+     * BookArrayList constructor.
+     * @param array $items
+     */
+    public function __construct(array $items = [])
     {
         parent::__construct(Book::class, $items);
     }
 
+    /**
+     * Validate all of items using Object->validate() and ArrayList each()
+     * @throws \Exception
+     * @return null|true
+     */
     public function validate()
     {
-        parent::each(function ($item, $key) {
+        parent::each(function (Book $item, $key) {
             try {
                 $item->validate();
-            } catch (\Exception $exception) { //TODO:: str_replace_array male laravel E!!! nemikham dependency be laravel dashte bashe agha!!!
-                throw new \Exception(str_replace_array('?', [$key, $exception->getMessage()], 'ArrayList validation failed at offset (?) with message: ?'));
+            } catch (\Exception $exception) {
+                throw new \Exception(sprintf('ArrayList validation failed at offset (%s) with message: %s' , $key, $exception->getMessage()));
             }
         });
+        return true;
     }
 }

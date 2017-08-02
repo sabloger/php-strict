@@ -10,13 +10,6 @@ namespace Php_Strict\Interfaces;
 
 interface ArrayListInterface
 {
-    // yek array ya collection az object haee ke hame faghat bayad be yek type object ya instance bashan! hamuni ke avali ke new mishe behesh midan,,,
-    // yek method e getType ham dare ke noee item haro mide ke baraye Validate khube!! :-)
-    // taze mitune bind beshe ba BaseObject tuye child ha ta ke higher order message bezane va hameye object haro ->Validate kone ;-)
-
-    // TODO mitune bejare Array, Collecton NEGAHDARE va returnesh collection bashe??? bad nista ama dependency hasho ziad mikone o dige gheire laravelia nemitunan estefade konan!!
-    // TODO emkane Higher order message ro juri faAl konam ke beshe extendesh kard o method zad o uno ruye hame bezane, va ye method az hameye object ha ro call kone!!
-
     /**
      * @param string $type
      * @param array $items

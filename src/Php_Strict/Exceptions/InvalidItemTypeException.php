@@ -13,10 +13,10 @@ use Throwable;
 
 class InvalidItemTypeException extends \Exception
 {
-    public function __construct($itemType , $exceptedType)
+    public function __construct($itemType , $expectedType)
     {
-        $message = 'Invalid item type exception: Excepted type was "exp_type" given "item_type"!';
-        $message = str_replace('exp_type' , $exceptedType , $message);
+        $message = 'Invalid item type exception: Expected type was "exp_type" given "item_type"!';
+        $message = str_replace('exp_type' , $expectedType , $message);
         $message = str_replace('item_type' , $itemType , $message);
         parent::__construct($message);
     }

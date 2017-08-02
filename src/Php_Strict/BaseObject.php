@@ -2,11 +2,11 @@
 
 namespace Php_Strict;
 
-use App\Exceptions\InvalidItemTypeException;
-use App\Exceptions\NullOrScalarOffsetException;
-use App\Exceptions\ObjectValidationFailedException;
-use App\Exceptions\RequiredFieldsNotFilledException;
-use App\Exceptions\SettingUndefinedFieldIsNotAllowed;
+use Php_Strict\Exceptions\InvalidItemTypeException;
+use Php_Strict\Exceptions\NullOrScalarOffsetException;
+use Php_Strict\Exceptions\ObjectValidationFailedException;
+use Php_Strict\Exceptions\RequiredFieldsNotFilledException;
+use Php_Strict\Exceptions\SettingUndefinedFieldIsNotAllowed;
 use Php_Strict\Traits\CountableTrait;
 use Php_Strict\Traits\IteratorTrait;
 use Php_Strict\Traits\JsonableTrait;
@@ -20,7 +20,6 @@ use Php_Strict\Interfaces\ObjectInterface;
 
 
 /**
- * TODO:: Change [] to array() to support rater than php 5.4
  * User: sabloger
  * Date: 7/10/17
  * Time: 9:06 AM
@@ -36,17 +35,6 @@ use Php_Strict\Interfaces\ObjectInterface;
  * Serializable
  * Arrayable
  * Iteratable
- * TODO:: Improve field options::
- * TODO:: CamelCase to SnackCase auto-convert (and vise versa)
- * TODO:: Fields alias name,, or json (and array) alternative name!!!
- * TODO:: such as string:case! automatic case convert on assign!! ,,
- * TODO:: or expert validations like laravel validators ,,
- * TODO:: depended and serial fill required fields!!! -> $a and $b are not required fields! But if you filled it you must fill $b!! ... :-)
- * TODO:: ability to set default values for fields!
- *
- * TODO::::: Auto-generate Setter Getters or PHPDocs for class by an artisan command!!
- *
- * TODO:: age tuye object beshe ye method (dasti ya base) dasht ke akharesh be dest befreste khodesh chi?? mishe mesle builder!! nazaret??!! --
  */
 abstract class BaseObject
     implements ObjectInterface, \IteratorAggregate, \Serializable, \Countable, \ArrayAccess, Arrayable, Jsonable, \JsonSerializable
@@ -232,12 +220,12 @@ abstract class BaseObject
      */
     function __call($name, $arguments)
     {
-        $lName = strtolower($name);
+        $methodName = strtolower($name);
         $callables = ['set', 'get'];
 
         foreach ($callables as $callable) {
-            if (strpos($lName, $callable) === 0) {
-                $postFix = str_replace_first($callable, '', $lName);
+            if (strpos($methodName, $callable) === 0) {
+                $postFix = substr($methodName, strlen($callable));
                 array_unshift($arguments, $postFix);
                 return call_user_func_array([$this, $callable], $arguments);
             }
@@ -314,7 +302,7 @@ abstract class BaseObject
      * @throws ObjectValidationFailedException
      */
     final public function validate()
-    { //TODO nemikham dependency be laravel dashte bashe ama validation e laravel khube ha!!!
+    {
         if (!$this->areRequiredFieldsFilled())
             throw new RequiredFieldsNotFilledException($this->getUnfilledFields());
         else
