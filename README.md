@@ -9,6 +9,7 @@ Strict-type Object base and Array-List for PHP 5! (5.4 and upper!)
 - If you need a way to pass packed arguments to functions you'll be happy with Php-Strict!
 - If you need a way to validate arguments and get rid of exceptions and data-misses on invalid arguments you'll be happy with Php-Strict!
 - If you want a strict-type ArrayList like Java and other strict-typed languages you'll be happy with Php-Strict!
+- Binding to HTTP request is comming soon!!
 
 ## Installation
 Add following code to your `composer.json` and run `composer update`:
