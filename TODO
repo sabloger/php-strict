@@ -1,0 +1,30 @@
+OBJECT:::
+TODO:: dar zamane tarife field haye stub, beshe type ArrayList of folan type tarif kard!!! :-)
+
+TODO:::: Auto binding to request inputs!! like go/gin and python serializer
+
+TODO::::: Auto-generate Setter Getters or PHPDocs for class by an artisan command!!
+
+TODO:: Change [] to array() to support rater than php 5.4
+
+TODO:: Improve field options::
+TODO:: CamelCase to SnackCase auto-convert (and vise versa)
+TODO:: Fields alias name,, or json (and array) alternative name!!!
+TODO:: such as string:case! automatic case convert on assign!! ,,
+TODO:: or expert validations like laravel validators ,,
+TODO:: depended and serial fill required fields!!! -> $a and $b are not required fields! But if you filled it you must fill $b!! ... :-)
+TODO:: ability to set default values for fields!
+
+TODO:: age tuye object beshe ye method (dasti ya base) dasht ke akharesh be dest befreste khodesh chi?? mishe mesle builder!! nazaret??!! --
+
+TODO nemikham dependency be laravel dashte bashe ama validation e laravel khube ha!!!
+
+
+
+ARRAYLIST:::
+TODO:: yek array ya collection az object haee ke hame faghat bayad be yek type object ya instance bashan! hamuni ke avali ke new mishe behesh midan,,,
+TODO:: yek method e getType ham dare ke noee item haro mide ke baraye Validate khube!! :-)
+TODO:: taze mitune bind beshe ba BaseObject tuye child ha ta ke higher order message bezane va hameye object haro ->Validate kone ;-)
+
+TODO:: mitune bejare Array, Collecton NEGAHDARE va returnesh collection bashe??? bad nista ama dependency hasho ziad mikone o dige gheire laravelia nemitunan estefade konan!!
+TODO:: emkane Higher order message ro juri faAl konam ke beshe extendesh kard o method zad o uno ruye hame bezane, va ye method az hameye object ha ro call kone!!
