@@ -188,7 +188,7 @@ $bookArr[] = $book;
 $bookArr->validate(); // PHP Fatal error:  Uncaught exception 'Exception' with message 'ArrayList validation failed at offset (0) with message: Required fields are not filled. unfilled required fields: (["year"])'
 
 foreach ($bookArr as $book) { // Iterateable :)
-  echo "item: $book \n";
+  echo "item: $book  \n";
 }
 ```
 ## LICENSE
